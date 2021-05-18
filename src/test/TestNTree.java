@@ -1,29 +1,32 @@
 package test;
 
-import model.ArbolNArio;
-import model.Nodo;
+import model.Tree;
+import model.Node;
 import model.Person;
 
 public class TestNTree<T> {
 	
 	public static void main(String[] args) {
-		Nodo<Person> node = new Nodo<Person>(new Person("Jorge"));
-		ArbolNArio<Person> arbol = new ArbolNArio<>(new Nodo<Person>(
+		Node<Person> node = new Node<Person>(new Person("Jorge"));
+		Tree<Person> arbol = new Tree<>(new Node<Person>(
 				node
 		));
 		
-		arbol.getRaiz().agregarHijo(new Nodo<Person>(new Person("checho")));
+	/*	arbol.getRaiz().agregarHijo(new Node<Person>(new Person("checho")));
 		
-		Nodo<Person> nodoB= arbol.searchNodeForData("checho");
+
+		Node<Person> nodeB = arbol.searchNodeForData("checho");
 		
-		nodoB.agregarHijo(new Nodo<Person>(new Person("Pepe1")));
-		nodoB.agregarHijo(new Nodo<Person>(new Person("Pepe2")));
-		nodoB.agregarHijo(new Nodo<Person>(new Person("Pepe3")));
-		nodoB.agregarHijo(new Nodo<Person>(new Person("Pepe4")));
+		nodeB.agregarHijo(new Node<Person>(new Person("Pepe1")));
+		nodeB.agregarHijo(new Node<Person>(new Person("Pepe2")));
+		nodeB.agregarHijo(new Node<Person>(new Person("Pepe3")));
+		nodeB.agregarHijo(new Node<Person>(new Person("Pepe4")));
 		
-		int num = arbol.getNumeroDescendientes(nodoB);
+		int num = arbol.getNumeroDescendientes(nodeB);
 		
 		System.out.println("Numero de desendientes: " + num);
+		
+	 */
 	}
 
 }

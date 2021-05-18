@@ -1,4 +1,4 @@
-package resources;
+package constants;
 
 import java.awt.Dimension;
 import java.awt.Point;
@@ -16,20 +16,20 @@ public class Constants {
 	public static final Point LOCATION_IMAGE_FRAME_PRINCIPAL = null;
 	
 	//ruta de imagenes 
-	public static final String IMAGE_FRAME_PINCIPAL = "../images/familiaPrincipal.png";
-	public static final String IMAGE_FRAME_TREE= "../images/FondoCampestre.jpg";
-	public static final String IMAGE_LINE = "../images/linea2.png";
-	public static final String PATH_FONT_ROSE = "../fontsResources/Rose Cake - Personal Use.otf";
-	public static final String PATH_FONT_CARTOON = "../fontsResources/CartooNature.ttf";
+	public static final String IMAGE_FRAME_PINCIPAL = "../resources.images/familiaPrincipal.png";
+	public static final String IMAGE_FRAME_TREE= "../resources.images/FondoCampestre.jpg";
+	public static final String IMAGE_LINE = "../resources.images/linea2.png";
+	public static final String PATH_FONT_ROSE = "../resources.fontsResources/Rose Cake - Personal Use.otf";
+	public static final String PATH_FONT_CARTOON = "../resources.fontsResources/CartooNature.ttf";
 	
 	//ruta sonidos
-	public static final String PATH_DIRECTORY_SOUNDS = "../mySounds/";
+	public static final String PATH_DIRECTORY_SOUNDS = "../resources.mySounds/";
 	
 	//formato de archivos
 	public static final String FORMAT_WAV = ".wav";
 	
 	//nombre de sonidos
-	public static final String CHILDRENS_PLAY = "niñosJugando";
+	public static final String CHILDRENS_PLAY = "niï¿½osJugando";
 	
 	//Mensajes
 	public static final String MESSAGE_MY_FAMILY = "MY FAMILIA";
@@ -39,7 +39,7 @@ public class Constants {
 	public static final String UP_OR_DOWN = "eje_y";
 	public static final String MOVING_SIDE = "eje_x";
 	
-	//tamaños de fuentes
+	//tamaï¿½os de fuentes
 	public static final int SIZE_FONT_MY_FAMILY = 80;
 	public static final int SIZE_FONT_CHARGE = 30;
 	

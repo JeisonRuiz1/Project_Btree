@@ -1,11 +1,11 @@
-package animation;
+package resources.animation;
 
 import java.awt.Component;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-import resources.Constants;
+import constants.Constants;
 
 public class AnimComponent {
 	

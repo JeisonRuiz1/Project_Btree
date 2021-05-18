@@ -6,10 +6,10 @@ import java.awt.Point;
 
 import javax.swing.JWindow;
 
-import animation.AnimComponent;
+import resources.animation.AnimComponent;
 import model.MyThread;
-import resources.Constants;
-import sound.Sounds;
+import constants.Constants;
+import components.sound.Sounds;
 
 public class FramePrincipal extends JWindow{
 	
@@ -34,19 +34,19 @@ public class FramePrincipal extends JWindow{
 	}
 	
 	public void addElements() {
-		//añadimos un panel para superPonerlo a la imagen
+		//aï¿½adimos un panel para superPonerlo a la imagen
 		panel = new BackgroundPanel(Color.blue, new Dimension((int) this.getWidth(), (int) this.getHeight()/2), new Point(0, this.getHeight()/2));
 		this.getContentPane().add(panel);
 		
-		//añadimos la imagen principal
+		//aï¿½adimos la imagen principal
 		image = new MyImage(Constants.IMAGE_FRAME_PINCIPAL, Constants.SIZE_IMAGE_FRAME_PRINCIPAL, 
 				new Point(middlePoint(this.getWidth(), (int) Constants.SIZE_IMAGE_FRAME_PRINCIPAL.getWidth()), this.getHeight()/2));
 		this.getContentPane().add(image);
 		
-		//añadimos la linea a el panel
+		//aï¿½adimos la linea a el panel
 		panel.addImage(Constants.IMAGE_LINE, new Dimension(this.getWidth()-100, 40), new Point(middlePoint(this.getWidth(), this.getWidth()-100), 0));
 	
-		//añadimos un texto al panel
+		//aï¿½adimos un texto al panel
 		panel.addText(Constants.MESSAGE_MY_FAMILY, Constants.SIZE_TEXT_MY_FAMILY, new Point(middlePoint((int) this.getWidth(),(int) Constants.SIZE_TEXT_MY_FAMILY.width), 50), Constants.PATH_FONT_CARTOON, Constants.SIZE_FONT_MY_FAMILY);
 	}
 	

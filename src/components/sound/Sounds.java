@@ -1,4 +1,4 @@
-package sound;
+package components.sound;
 
 import java.io.File;
 
@@ -7,7 +7,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
-import resources.Constants;
+import constants.Constants;
 
 /**
  * esta clase es capaz de reproducir sonidos en formato WAV
@@ -27,7 +27,7 @@ public class Sounds {
     public void playSound(String sound, int wait) {
         try {
         	clip = AudioSystem.getClip();
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(this.getClass().getResource("..\\mySounds\\niñosJugando.wav").getPath()));
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(this.getClass().getResource("..\\resources.mySounds\\niñosJugando.wav").getPath()));
             clip.open(audioInputStream);
             clip.start();
             Thread.sleep(wait);

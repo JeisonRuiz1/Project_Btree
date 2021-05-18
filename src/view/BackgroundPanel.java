@@ -10,7 +10,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import fonts.MyFont;
+import resources.fonts.MyFont;
 
 public class BackgroundPanel extends JPanel{
 
@@ -21,7 +21,7 @@ public class BackgroundPanel extends JPanel{
 	private Color color;
 	
 	/**
-	 * Crea el panel y añade una imagen al mismo
+	 * Crea el panel y aï¿½ade una imagen al mismo
 	 * @param pathImage
 	 * @param size
 	 * @param locale
