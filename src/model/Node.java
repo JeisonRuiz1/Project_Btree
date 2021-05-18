@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A node of any type. A node contains a data and links to it's children and it's parent.
+ * Un nodo de cualquier tipo. Un nodo contiene datos y enlaces a sus hijos y su padre.
  *
- * @param <T> The class type of the node
+ * @param <T> El tipo de clase Node
  */
 public class Node<T> {
     private T data;
@@ -19,10 +19,10 @@ public class Node<T> {
     }
 
     /**
-     * Initialize a node with another node's data.
-     * This does not copy the node's children.
+     * Inicialice un nodo con los datos de otro nodo.
+     * Esto no copia a los hijos del nodo.
      *
-     * @param node The node whose data is to be copied.
+     * @param node El nodo cuyos datos se van a copiar.
      */
     public Node(Node<T> node) {
         this.data = node.getData();
@@ -31,7 +31,7 @@ public class Node<T> {
 
     /**
      *
-     * Add a child to this node.
+     * Agregue un hijo a este nodo.
      *
      * @param child child node
      */
@@ -42,10 +42,10 @@ public class Node<T> {
 
     /**
      *
-     * Add a child node at the given index.
+     * Agregue un nodo secundario en el índice dado.
      *
-     * @param index The index at which the child has to be inserted.
-     * @param child The child node.
+     * @param index El índice en el que se debe insertar el hijo
+     * @param child El nodo hijo.
      */
     public void addChildAt(int index, Node<T> child) {
         child.setParent(this);
@@ -60,7 +60,7 @@ public class Node<T> {
     }
 
     /**
-     * Remove all children of this node.
+     * Elimine todos los hijos de este nodo.
      */
     public void removeChildren() {
         this.children.clear();
@@ -68,21 +68,21 @@ public class Node<T> {
 
     /**
      *
-     * Remove child at given index.
+     * Eliminar el hijo en el índice dado.
      *
-     * @param index The index at which the child has to be removed.
-     * @return the removed node.
+     * @param index El índice en el que el hijo tiene que ser eliminado.
+     * @return el indice del nodo eliminado.
      */
     public Node<T> removeChildAt(int index) {
         return children.remove(index);
     }
 
     /**
-     * Remove given child of this node.
+     * Elimina el hijo dado de este nodo.
      *
-     * @param childToBeDeleted the child node to remove.
-     * @return <code>true</code> if the given node was a child of this node and was deleted,
-     * <code>false</code> otherwise.
+     * @param childToBeDeleted el nodo hijo para eliminar.
+     * @return <code>true</code> si el nodo dado era un hijo de este nodo y se eliminó,
+     * <code>false</code> de lo contrario.
      */
     public boolean removeChild(Node<T> childToBeDeleted) {
         List<Node<T>> list = getChildren();

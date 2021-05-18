@@ -5,44 +5,44 @@ import java.util.ArrayList;
 /**
  * Generic n-ary tree.
  *
- * @param <T> Any class type
+ * @param <T> Clase generica
  */
 public class Tree<T> {
 
 	private Node<T> root;
 
 	/**
-	 * Initialize a tree with the specified root node.
+	 * Inicializa un árbol con el nodo raíz especificado.
 	 *
-	 * @param root The root node of the tree
+	 * @param root El nodo raíz del árbol.
 	 */
 	public Tree(Node<T> root) {
 		this.root = root;
 	}
 
 	/**
-	 * Checks if the tree is empty (root node is null)
+	 * Comprueba si el árbol está vacío (el nodo raíz es nulo)
 	 *
-	 * @return <code>true</code> if the tree is empty,
-	 * <code>false</code> otherwise.
+	 * @return <code>true</code> si el arbol esta vacio,
+	 * <code>false</code>  de lo contrario.
 	 */
 	public boolean isEmpty() {
 		return root == null;
 	}
 
 	/**
-	 * Get the root node of the tree
+	 * Obtener el nodo raíz del árbol
 	 *
-	 * @return the root node.
+	 * @return el nodo raíz.
 	 */
 	public Node<T> getRoot() {
 		return root;
 	}
 
 	/**
-	 * Set the root node of the tree. Replaces existing root node.
+	 * Establezca el nodo raíz del árbol. Reemplaza el nodo raíz existente.
 	 *
-	 * @param root The root node to replace the existing root node with.
+	 * @param root El nodo raíz con el que se reemplazará el nodo raíz existente.
 	 */
 	public void setRoot(Node<T> root) {
 		this.root = root;
@@ -50,20 +50,20 @@ public class Tree<T> {
 
 	/**
 	 *
-	 * Check if given data is present in the tree.
+	 * Compruebe si los datos dados están presentes en el árbol.
 	 *
-	 * @param key The data to search for
-	 * @return <code>true</code> if the given key was found in the tree,
-	 * <code>false</code> otherwise.
+	 * @param key Los datos para buscar
+	 * @return <code>true</code> si la clave dada se encontró en el árbol,
+	 * <code>false</code> de lo contrario.
 	 */
 	public boolean exists(T key) {
 		return find(root, key);
 	}
 
 	/**
-	 * Get the number of nodes (size) in the tree.
+	 * Obtenga la cantidad de nodos (tamaño) en el árbol.
 	 *
-	 * @return The number of nodes in the tree
+	 * @return El número de nodos en el árbol.
 	 */
 	public int size() {
 		return getNumberOfDescendants(root) + 1;
@@ -71,10 +71,10 @@ public class Tree<T> {
 
 	/**
 	 *
-	 * Get the number of descendants a given node has.
+	 * Obtiene el número de descendientes que tiene un nodo determinado.
 	 *
-	 * @param node The node whose number of descendants is needed.
-	 * @return the number of descendants
+	 * @param node El nodo cuyo número de descendientes se necesita.
+	 * @return el número de descendientes
 	 */
 	public int getNumberOfDescendants(Node<T> node) {
 		int n = node.getChildren().size();
@@ -115,9 +115,9 @@ public class Tree<T> {
 
 	/**
 	 *
-	 * Get the list of nodes arranged by the pre-order traversal of the tree.
+	 * Obtenga la lista de nodos organizados por el recorrido del árbol por pre-orden
 	 *
-	 * @return The list of nodes in the tree, arranged in the pre-order
+	 * @return La lista de nodos en el árbol, organizados en el pre-orden
 	 */
 	public ArrayList<Node<T>> getPreOrderTraversal() {
 		ArrayList<Node<T>> preOrder = new ArrayList<Node<T>>();
@@ -127,9 +127,9 @@ public class Tree<T> {
 
 	/**
 	 *
-	 * Get the list of nodes arranged by the post-order traversal of the tree.
+	 * Obtenga la lista de nodos organizados por el recorrido post-orden del árbol.
 	 *
-	 * @return The list of nodes in the tree, arranged in the post-order
+	 * @return La lista de nodos en el árbol, organizados en el post-orden
 	 */
 	public ArrayList<Node<T>> getPostOrderTraversal() {
 		ArrayList<Node<T>> postOrder = new ArrayList<Node<T>>();
@@ -153,9 +153,9 @@ public class Tree<T> {
 
 	/**
 	 *
-	 * Get the list of nodes in the longest path from root to any leaf in the tree.
+	 *Obtenga la lista de nodos en la ruta más larga desde la raíz hasta cualquier hoja del árbol.
 	 *
-	 * For example, for the below tree
+	 * Por ejemplo, para el árbol de abajo
 	 * <pre>
 	 *          A
 	 *         / \
@@ -166,9 +166,9 @@ public class Tree<T> {
 	 *              F
 	 * </pre>
 	 *
-	 * The result would be [A, C, E, F]
+	 * El resultado sera [A, C, E, F]
 	 *
-	 * @return The list of nodes in the longest path.
+	 * @return La lista de nodos en la ruta más larga.
 	 */
 	public ArrayList<Node<T>> getLongestPathFromRootToAnyLeaf() {
 		ArrayList<Node<T>> longestPath = null;
@@ -185,9 +185,9 @@ public class Tree<T> {
 
 	/**
 	 *
-	 * Get the height of the tree (the number of nodes in the longest path from root to a leaf)
+	 * Obtenga la altura del árbol (la cantidad de nodos en el camino más largo desde la raíz hasta la hoja)
 	 *
-	 * @return The height of the tree.
+	 * @return La altura del árbol.
 	 */
 	public int getHeight() {
 		return getLongestPathFromRootToAnyLeaf().size();
@@ -197,7 +197,7 @@ public class Tree<T> {
 	 *
 	 * Get a list of all the paths (which is again a list of nodes along a path) from the root node to every leaf.
 	 *
-	 * @return List of paths.
+	 * @return Lista de caminos.
 	 */
 	public ArrayList<ArrayList<Node<T>>> getPathsFromRootToAnyLeaf() {
 		ArrayList<ArrayList<Node<T>>> paths = new ArrayList<ArrayList<Node<T>>>();
@@ -215,7 +215,7 @@ public class Tree<T> {
 		currentPath.add(node);
 
 		if (node.getChildren().size() == 0) {
-			// This is a leaf
+			// Esta es una hoja
 			paths.add(clone(currentPath));
 		}
 		for (Node<T> child : node.getChildren())

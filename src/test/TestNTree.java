@@ -25,7 +25,7 @@ public class TestNTree<T> {
 		int num = arbol.getNumeroDescendientes(nodeB);
 		
 		System.out.println("Numero de desendientes: " + num);
-		
+
 	 */
 	}
 
