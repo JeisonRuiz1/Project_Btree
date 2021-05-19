@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -7,7 +8,7 @@ import java.util.ArrayList;
  *
  * @param <T> Clase generica
  */
-public class Tree<T> {
+public class Tree<T> implements Serializable {
 
 	private Node<T> root;
 
@@ -82,7 +83,6 @@ public class Tree<T> {
 			n += getNumberOfDescendants(child);
 
 		return n;
-
 	}
 
 	private boolean find(Node<T> node, T keyNode) {
